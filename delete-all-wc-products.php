@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Delete All WooCommerce Products
- * Plugin URI:  https://github.com/anemirov/delete-all-wc-products
+ * Plugin URI:  https://github.com/al-nemirov/delete-all-wc-products
  * Description: Adds a button to permanently delete all WooCommerce products (including variations) in one click.
  * Version:     1.0
  * Author:      Alexander Nemirov
- * Author URI:  https://github.com/anemirov
+ * Author URI:  https://github.com/al-nemirov
  * License:     MIT
  * License URI: https://opensource.org/licenses/MIT
  * Text Domain: delete-all-wc-products
@@ -63,10 +63,19 @@ function dawp_render_admin_page() {
         </p>
         <p>It is recommended to back up your database before proceeding.</p>
 
-        <form method="post" onsubmit="return confirm('Are you SURE you want to delete ALL products? This cannot be undone.');">
+        <form method="post" onsubmit="return dawpConfirmDelete();">
             <?php wp_nonce_field( 'dawp_delete_action', 'dawp_nonce' ); ?>
             <input type="submit" name="dawp_delete_all" class="button button-primary" value="DELETE ALL PRODUCTS PERMANENTLY">
         </form>
+        <script>
+        function dawpConfirmDelete() {
+            if ( ! confirm('Are you SURE you want to delete ALL products? This cannot be undone.') ) {
+                return false;
+            }
+            var typed = prompt('Type DELETE to confirm permanent deletion of all products:');
+            return typed !== null && typed.trim().toUpperCase() === 'DELETE';
+        }
+        </script>
 
         <?php
         // Обработка отправки формы: проверяем nonce и запускаем удаление
