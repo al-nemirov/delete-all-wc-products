@@ -31,7 +31,7 @@ Complete catalog cleanup before import, migration, or testing. Permanently delet
 
 1. Download or clone this repository:
    ```bash
-   git clone https://github.com/anemirov/delete-all-wc-products.git
+   git clone https://github.com/al-nemirov/delete-all-wc-products.git
    ```
 2. Copy the `delete-all-wc-products` folder to `wp-content/plugins/`
 3. Activate the plugin in **Plugins** menu
@@ -77,7 +77,7 @@ Complete catalog cleanup before import, migration, or testing. Permanently delet
 
 1. Скачайте или клонируйте репозиторий:
    ```bash
-   git clone https://github.com/anemirov/delete-all-wc-products.git
+   git clone https://github.com/al-nemirov/delete-all-wc-products.git
    ```
 2. Скопируйте папку `delete-all-wc-products` в `wp-content/plugins/`
 3. Активируйте плагин в меню **Плагины**
