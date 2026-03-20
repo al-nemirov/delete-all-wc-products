@@ -1,4 +1,32 @@
+# OS files
 .DS_Store
 Thumbs.db
-*.log
+Desktop.ini
+
+# Dependencies
 node_modules/
+vendor/
+
+# Logs
+*.log
+debug.log
+error_log
+
+# WordPress specific
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backups/
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
